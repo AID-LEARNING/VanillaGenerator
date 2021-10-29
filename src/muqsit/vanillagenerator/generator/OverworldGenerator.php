@@ -121,7 +121,7 @@ class OverworldGenerator extends Generator
 			if ($dirtyEntry) {
 				$c = $world->getChunk($x, $z);
 
-				$c->setTerrainDirtyFlag(Chunk::DIRTY_FLAG_TERRAIN, true);
+				$c->setTerrainDirtyFlag(Chunk::DIRTY_FLAG_BLOCKS, true);
 				$c->setTerrainDirtyFlag(Chunk::DIRTY_FLAG_BIOMES, true);
 			}
 		}
