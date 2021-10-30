@@ -22,10 +22,7 @@ class NetherGenerator extends Generator
 	public function __construct(int $seed, string $preset)
 	{
 		parent::__construct($seed, $preset);
-
-		print "Starting NetherGenerator" . PHP_EOL;
 		$this->generator = new \NetherGenerator($seed);
-		print "OK" . PHP_EOL;
 	}
 
 	public function generateChunk(ChunkManager $world, int $chunkX, int $chunkZ): void
