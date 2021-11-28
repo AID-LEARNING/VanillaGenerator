@@ -18,14 +18,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Unpack PHP Release
         run: unzip Linux.zip && tar -xzvf PHP_Linux-x86_64.tar.gz
-      - name: Download Composer
-        run: curl -o composer.phar "https://getcomposer.org/composer-stable.phar"
       - name: Checkout PharBuilder
         uses: actions/checkout@v2.3.4
         with:
           repository: NetherGamesMC/PharBuilder
           token: ${{ secrets.ng_token }}
           path: PharBuilder
+      - name: Download Composer
+        run: curl -o composer.phar "https://getcomposer.org/composer-stable.phar"
       - name: Install Composer dependencies
         run: ./bin/php7/bin/php composer.phar install --prefer-dist --no-interaction
       - name: Run PHPStan
