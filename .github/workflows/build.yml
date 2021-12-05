@@ -33,7 +33,7 @@ jobs:
           ./bin/php7/bin/php -dphar.readonly=0 PharBuilder/BuildScript.php --make "" --out PharBuilder/VanillaGenerator.phar
           echo Build completed!
       - name: Upload
-        uses: actions/upload-artifact@v2.2.3
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: VanillaGenerator
           path: PharBuilder/VanillaGenerator.phar
